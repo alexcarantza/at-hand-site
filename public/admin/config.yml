@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "public/images/managers"
+public_folder: "/images/managers"
+
+collections:
+  - name: "managers"
+    label: "Managers"
+    folder: "src/content/managers"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    extension: "json"
+    identifier_field: "name"
+    summary: "{{name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Approved", name: "approved", widget: "boolean", default: true }
+      - { label: "Headshot", name: "image", widget: "image", required: false }
+      - { label: "Short Title", name: "title", widget: "string", required: false }
+      - { label: "Bio", name: "bioShort", widget: "text" }
