@@ -10,7 +10,7 @@ public_folder: "/images/managers"
 collections:
   - name: "managers"
     label: "Managers"
-    folder: "src/content/managers"
+    folder: "/content/managers"
     create: true
     slug: "{{slug}}"
     format: "json"
